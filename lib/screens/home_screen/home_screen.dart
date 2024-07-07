@@ -1,6 +1,6 @@
 import 'package:ecshop_riverpod/screens/home_screen/home_header.dart';
+import 'package:ecshop_riverpod/screens/home_screen/home_item_categories.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,7 +17,12 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: HomeHeader(),
+      body: Column(
+        children: [
+          HomeHeader(),
+          HomeItemCategories(),
+        ],
+      ),
     );
   }
 }
