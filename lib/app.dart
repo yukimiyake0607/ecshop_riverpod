@@ -6,7 +6,25 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        appBarTheme: const AppBarTheme(
+          color: Colors.blue,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.white,
+          ),
+        ),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: Colors.white),
+          bodyMedium: TextStyle(color: Colors.white),
+        ),
+      ),
       home: HomeScreen(),
     );
   }

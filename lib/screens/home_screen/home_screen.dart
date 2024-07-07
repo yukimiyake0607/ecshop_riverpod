@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,10 +5,19 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      );
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Sport Shops'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.shopping_cart),
+          ),
+        ],
+      ),
+      body: Center(
+        child: Text('Hello World!'),
+      ),
+    );
   }
 }
