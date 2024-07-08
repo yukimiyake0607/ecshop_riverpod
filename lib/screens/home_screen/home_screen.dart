@@ -18,8 +18,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [
+      body: const CustomScrollView(
+        slivers: [
           HomeHeader(),
           HomeItemCategories(),
           HomeItems(),

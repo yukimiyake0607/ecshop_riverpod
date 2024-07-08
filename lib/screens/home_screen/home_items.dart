@@ -5,6 +5,23 @@ class HomeItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Home Items');
+    return SliverGrid(
+      delegate: SliverChildBuilderDelegate(
+        (context, index) {
+          return Container(
+            color: Colors.lightBlueAccent,
+            alignment: Alignment.center,
+            child: const Text('Home Item'),
+          );
+        },
+        childCount: 10,
+      ),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        mainAxisSpacing: 16,
+        crossAxisSpacing: 16,
+        childAspectRatio: 0.8,
+      ),
+    );
   }
 }

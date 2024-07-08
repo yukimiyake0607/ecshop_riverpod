@@ -14,32 +14,34 @@ class HomeItemCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 80,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: categories
-            .map(
-              (category) => Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  width: 80,
-                  height: 80,
-                  child: Center(
-                    child: Image.asset(
-                      'assets/icons/$category.png',
-                      width: 60,
-                      height: 60,
+    return SliverToBoxAdapter(
+      child: Container(
+        height: 80,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: categories
+              .map(
+                (category) => Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    width: 80,
+                    height: 80,
+                    child: Center(
+                      child: Image.asset(
+                        'assets/icons/$category.png',
+                        width: 60,
+                        height: 60,
+                      ),
                     ),
                   ),
                 ),
-              ),
-            )
-            .toList(),
+              )
+              .toList(),
+        ),
       ),
     );
   }
