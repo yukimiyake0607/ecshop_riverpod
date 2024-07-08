@@ -1,5 +1,6 @@
 import 'package:ecshop_riverpod/screens/home_screen/home_header.dart';
 import 'package:ecshop_riverpod/screens/home_screen/home_item_categories.dart';
+import 'package:ecshop_riverpod/screens/home_screen/home_items.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,6 +22,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           HomeHeader(),
           HomeItemCategories(),
+          HomeItems(),
         ],
       ),
     );
