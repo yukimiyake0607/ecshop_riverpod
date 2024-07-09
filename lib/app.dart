@@ -1,5 +1,6 @@
 import 'package:ecshop_riverpod/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MainApp extends StatelessWidget {
@@ -10,9 +11,12 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(
-          color: Colors.blue,
+          backgroundColor: Colors.transparent,
+          foregroundColor: Colors.black,
+          elevation: 0,
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
           titleTextStyle: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
@@ -27,7 +31,6 @@ class MainApp extends StatelessWidget {
           ThemeData.dark().textTheme,
         ),
       ),
-      themeMode: ThemeMode.dark,
       home: HomeScreen(),
     );
   }
