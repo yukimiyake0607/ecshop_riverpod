@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
+    return const SliverToBoxAdapter(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -14,16 +13,16 @@ class HomeHeader extends StatelessWidget {
           children: [
             Text(
               'ようこそ、太郎さん',
-              style: GoogleFonts.montserrat(
-                fontSize: 28,
+              style: TextStyle(
                 fontWeight: FontWeight.w600,
+                fontSize: 28,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'Summer Collection 2024 is now available!!',
-                style: GoogleFonts.montserrat(
+                style: TextStyle(
                   fontSize: 16,
                 ),
               ),

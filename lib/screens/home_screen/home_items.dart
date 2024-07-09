@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeItems extends StatelessWidget {
   const HomeItems({super.key});
@@ -55,19 +54,13 @@ class _ItemsCard extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 2),
-          child: Text(
-            "Super Shoes 1",
-            style: GoogleFonts.montserrat(),
-          ),
+        const Padding(
+          padding: EdgeInsets.symmetric(vertical: 2),
+          child: Text("Super Shoes 1"),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 2),
-          child: Text(
-            '12,800yen',
-            style: GoogleFonts.montserrat(),
-          ),
+        const Padding(
+          padding: EdgeInsets.symmetric(vertical: 2),
+          child: Text('12,800yen'),
         ),
       ],
     );

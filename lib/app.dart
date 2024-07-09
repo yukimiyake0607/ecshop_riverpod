@@ -1,5 +1,6 @@
 import 'package:ecshop_riverpod/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -20,10 +21,7 @@ class MainApp extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.black),
-          bodyMedium: TextStyle(color: Colors.black),
-        ),
+        textTheme: GoogleFonts.montserratTextTheme(),
       ),
       home: HomeScreen(),
     );
