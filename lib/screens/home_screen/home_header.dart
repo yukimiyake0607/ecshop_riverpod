@@ -5,26 +5,23 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SliverToBoxAdapter(
+    return SliverToBoxAdapter(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'ようこそ、太郎さん',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 28,
-              ),
+              'Welcome, Taro!',
+              style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'Summer Collection 2024 is now available!!',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
+                style: Theme.of(context).textTheme.titleMedium,
               ),
             ),
           ],
