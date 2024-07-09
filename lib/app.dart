@@ -8,8 +8,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(
           color: Colors.blue,
           titleTextStyle: TextStyle(
@@ -23,6 +22,12 @@ class MainApp extends StatelessWidget {
         ),
         textTheme: GoogleFonts.montserratTextTheme(),
       ),
+      darkTheme: ThemeData.dark().copyWith(
+        textTheme: GoogleFonts.montserratTextTheme(
+          ThemeData.dark().textTheme,
+        ),
+      ),
+      themeMode: ThemeMode.dark,
       home: HomeScreen(),
     );
   }
