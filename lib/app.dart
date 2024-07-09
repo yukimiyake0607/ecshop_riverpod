@@ -25,11 +25,13 @@ class MainApp extends StatelessWidget {
           ),
         ),
         textTheme: GoogleFonts.montserratTextTheme(),
+        highlightColor: Colors.lightBlue[100],
       ),
       darkTheme: ThemeData.dark().copyWith(
         textTheme: GoogleFonts.montserratTextTheme(
           ThemeData.dark().textTheme,
         ),
+        highlightColor: Colors.lightBlue[700],
       ),
       home: HomeScreen(),
     );

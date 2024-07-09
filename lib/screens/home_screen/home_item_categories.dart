@@ -25,7 +25,7 @@ class HomeItemCategories extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 4.0),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: Theme.of(context).highlightColor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     width: 80,
