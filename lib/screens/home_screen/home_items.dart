@@ -11,7 +11,7 @@ class HomeItems extends StatelessWidget {
           return Container(
             color: Colors.lightBlueAccent,
             alignment: Alignment.center,
-            child: const Text('Home Item'),
+            child: Text('Home Item$index'),
           );
         },
         childCount: 10,
