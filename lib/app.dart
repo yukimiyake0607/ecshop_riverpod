@@ -33,6 +33,7 @@ class MainApp extends StatelessWidget {
         ),
         highlightColor: Colors.lightBlue[700],
       ),
+      themeMode: ThemeMode.dark,
       home: HomeScreen(),
     );
   }
