@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final nameProvider = Provider((ref) => 'Yuki');
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

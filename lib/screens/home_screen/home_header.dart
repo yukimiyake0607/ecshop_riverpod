@@ -1,4 +1,5 @@
 import 'package:ecshop_riverpod/main.dart';
+import 'package:ecshop_riverpod/models/data/login_user/login_user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -7,7 +8,7 @@ class HomeHeader extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final name = ref.watch(nameProvider);
+    final loginUser = ref.watch(loginUserProvider);
     return SliverToBoxAdapter(
       child: Padding(
         padding: EdgeInsets.all(8.0),
@@ -15,7 +16,7 @@ class HomeHeader extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Welcome, $name!',
+              'Welcome, ${loginUser.name}!',
               style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
