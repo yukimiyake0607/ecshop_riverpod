@@ -45,13 +45,19 @@ class _ItemsCard extends StatelessWidget {
             ),
           ),
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(vertical: 2),
-          child: Text("Super Shoes 1"),
+          child: Text(
+            "Super Shoes 1",
+            style: Theme.of(context).textTheme.bodyLarge,
+          ),
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(vertical: 2),
-          child: Text('12,800yen'),
+          child: Text(
+            '12,800yen',
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
         ),
       ],
     );
