@@ -8,7 +8,7 @@ class HomeHeader extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final loginUser = ref.watch(loginUserProvider);
+    final loginUserName = ref.watch(loginUserNameProvider);
     return SliverToBoxAdapter(
       child: Padding(
         padding: EdgeInsets.all(8.0),
@@ -16,7 +16,7 @@ class HomeHeader extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Welcome, ${loginUser.name}!',
+              'Welcome, $loginUserName!',
               style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                     fontWeight: FontWeight.w600,
                   ),

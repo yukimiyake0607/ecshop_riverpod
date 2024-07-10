@@ -4,7 +4,11 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'login_user.freezed.dart';
 
 final loginUserProvider = Provider(
-  (ref) => LoginUser(id: 'abcd1234', name: 'Yuki'),
+  (ref) => LoginUser(id: 'abcd1234', name: 'Kinako'),
+);
+
+final loginUserNameProvider = Provider(
+  (ref) => ref.watch(loginUserProvider.select((user) => user.name)),
 );
 
 @freezed
