@@ -10,3 +10,8 @@ final shopItemProvider = FutureProvider((ref) async {
   final items = json.map(Item.fromJson).toList();
   return items;
 });
+
+final shopItemIdsProvider = Provider((ref) {
+  final AsyncValue<List<Item>> items = ref.watch(shopItemProvider);
+  return items.whenData((items) => items.map((item) => item.id).toList());
+});
