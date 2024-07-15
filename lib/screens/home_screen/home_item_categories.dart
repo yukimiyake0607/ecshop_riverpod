@@ -5,15 +5,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class HomeItemCategories extends ConsumerWidget {
   const HomeItemCategories({super.key});
 
-  static const List<String> categories = [
-    'shoes',
-    'bag',
-    'eyewear',
-    'pants',
-    'shirts',
-    'jacket',
-  ];
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedCategory = ref.watch(selectedCategoryProvider);
