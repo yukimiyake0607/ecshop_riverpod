@@ -2,11 +2,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 enum ItemCategory {
   shoes,
-  uniform,
+  shirts,
   jacket,
-  pant,
-  glass,
-  backpack,
+  pants,
+  eyewear,
+  bag,
 }
 
 final selectedCategoryProvider = StateProvider((ref) => ItemCategory.shoes);
