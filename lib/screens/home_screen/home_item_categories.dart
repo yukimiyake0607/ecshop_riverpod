@@ -17,20 +17,26 @@ class HomeItemCategories extends ConsumerWidget {
               .map(
                 (category) => Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: (selectedCategory == category)
-                          ? Theme.of(context).highlightColor
-                          : Theme.of(context).canvasColor,
-                    ),
-                    width: 80,
-                    height: 80,
-                    child: Center(
-                      child: Image.asset(
-                        'assets/icons/${category.name}.png',
-                        width: 60,
-                        height: 60,
+                  child: InkWell(
+                    onTap: () => {
+                      ref.read(selectedCategoryProvider.notifier).state =
+                          category,
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: (selectedCategory == category)
+                            ? Theme.of(context).highlightColor
+                            : Theme.of(context).canvasColor,
+                      ),
+                      width: 80,
+                      height: 80,
+                      child: Center(
+                        child: Image.asset(
+                          'assets/icons/${category.name}.png',
+                          width: 60,
+                          height: 60,
+                        ),
                       ),
                     ),
                   ),
