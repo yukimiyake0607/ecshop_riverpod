@@ -48,3 +48,20 @@ class HomeItemCategories extends ConsumerWidget {
     );
   }
 }
+
+class _CategoryImage extends ConsumerWidget {
+  const _CategoryImage({super.key, required this.category});
+  final ItemCategory category;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final imagePath = ref.watch(categoryIconPathProvider(category));
+    return (imagePath!.isEmpty)
+        ? const Text('No Image')
+        : Image.asset(
+            imagePath,
+            width: 60,
+            height: 60,
+          );
+  }
+}
