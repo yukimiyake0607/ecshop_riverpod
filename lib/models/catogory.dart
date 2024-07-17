@@ -1,11 +1,18 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum ItemCategory {
+  @JsonValue('shoes')
   shoes,
+  @JsonValue('shirts')
   shirts,
+  @JsonValue('jacket')
   jacket,
+  @JsonValue('pants')
   pants,
+  @JsonValue('eyewear')
   eyewear,
+  @JsonValue('bag')
   bag,
 }
 
