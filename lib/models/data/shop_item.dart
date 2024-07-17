@@ -1,4 +1,5 @@
 import 'dart:convert' show jsonDecode;
+import 'package:ecshop_riverpod/models/catogory.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ecshop_riverpod/models/data/item/item.dart';
@@ -10,7 +11,11 @@ final shopItemProvider = FutureProvider((ref) async {
   return items;
 });
 
-final shopItemIdsProvider = Provider((ref) {
+final shopItemIdsForSelectedCategoryProvider = Provider((ref) {
   final AsyncValue<List<Item>> items = ref.watch(shopItemProvider);
-  return items.whenData((items) => items.map((item) => item.id).toList());
+  final selectedCategory = ref.watch(selectedCategoryProvider);
+  return items.whenData((items) => items
+      .where((item) => item.category == selectedCategory)
+      .map((item) => item.id)
+      .toList());
 });
